@@ -1,0 +1,2 @@
+new title|new content
+Finish Python book|Working on 10'th chapter
