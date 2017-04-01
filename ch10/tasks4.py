@@ -43,11 +43,11 @@ elif command == "list":
     if len(tasks) == 0:
         print("there are no tasks!")
     else:
-        print("|-%s----%s----%s----|"%("index", "title", "content"))
+        print("|-{0}----{1}----{2}----|".format("index", "title", "content"))
         tasks = [task.strip() for task in tasks]
         for i in range(len(tasks)):
             title, content = tasks[i].split('|')
-            print("|-%d--%s----%s-|" %(i, title, content))
+            print("|-{0}--{1}----{2}-|".format(i, title, content))
     file.close()
 else:
     print("invalid command!")

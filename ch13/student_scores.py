@@ -10,9 +10,9 @@ marks = {}
 
 for i in range(len(score)):
     sc = score[i].split(",")
-    marks[sc[0]] = sc[1:]
+    marks[sc[0]] = sum([int(j) for j in sc[1:]])
 
-# Find out the name of student who has score maximum marks in each subject
+# Find out the name of student who has score combined maximum marks.
 
 for name in marks.keys():
-    
+    print("{0}: {1}".format(name, marks[name]))

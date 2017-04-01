@@ -13,7 +13,7 @@ def main():
         sys.exit(1)
 
     if command not in (ADD,REMOVE,LIST):
-        print("Invalid command\n Use %s/%s/%s"%(ADD,REMOVE,LIST))
+        print("Invalid command\n Use {0}/{1}/{2}".format(ADD,REMOVE,LIST))
         sys.exit(1)
 
     if command == ADD:
@@ -48,11 +48,11 @@ def list_task():
     if len(tasks) == 0:
         print("there are no tasks!")
     else:
-        print("|-%s----%s----%s----|"%("index", "title", "content"))
+        print("|-{0}----{1}----{2}----|".format("index", "title", "content"))
         tasks = [task.strip() for task in tasks]
         for i in range(len(tasks)):
             title, content = tasks[i].split('|')
-            print("|-%d--%s----%s-|" %(i, title, content))
+            print("|-.formatd--{0}----{1}-|" .format(i, title, content))
     file.close()
 
 def add_task(title, content):

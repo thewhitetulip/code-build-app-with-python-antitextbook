@@ -14,7 +14,7 @@ def main():
         sys.exit(1)
 
     if command not in (ADD,REMOVE,LIST):
-        print("Invalid command\n Use %s/%s/%s"%(ADD,REMOVE,LIST))
+        print("Invalid command\n Use {0}/{1}/{2}".format(ADD,REMOVE,LIST))
         sys.exit(1)
 
     if command == ADD:
